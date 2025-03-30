@@ -17,4 +17,4 @@ __pycache__/
 .idea/
 
 # Ignore migration files cache (Optional)
-*/migrations/__pycache__/
+*/migrations/__pycache__/.env
