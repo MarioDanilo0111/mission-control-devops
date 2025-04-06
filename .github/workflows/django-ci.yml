@@ -55,3 +55,12 @@ jobs:
         run: |
           source venv/bin/activate
           python backend/manage.py test
+
+      - name: Debug ENV
+        run: env | grep DATABASE
+        env:
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
