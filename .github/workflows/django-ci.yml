@@ -64,3 +64,7 @@ jobs:
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
           DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+
+      - name: Build Docker image
+        run: |
+          docker build -t my-backend-app ./backend
