@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # ✅ Copy the .env file BEFORE copying everything else
-COPY .env /app/.env
+COPY backend/.env /app/.env
 
 # Copy the rest of the application code
 COPY . .

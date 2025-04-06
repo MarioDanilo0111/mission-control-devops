@@ -71,7 +71,7 @@ jobs:
 
       - name: Create .env files from secrets
         run: |
-          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" > backend/.env
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> backend/.env
           echo "DATABASE_USER=${{ secrets.DATABASE_USER }}" >> backend/.env
           echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}" >> backend/.env
           echo "DATABASE_HOST=${{ secrets.DATABASE_HOST }}" >> backend/.env
